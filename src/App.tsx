@@ -4,10 +4,10 @@ import Contact from "./pages/Contact";
 
 function App() {
   return (
-    <Router basename="/contact">
+    <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/:id" element={<Contact />} />
+        <Route path="/contact/:id" element={<Contact />} />
       </Routes>
     </Router>
   );

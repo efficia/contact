@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { Phone, Mail, Building2, User, Download, ArrowLeft } from "lucide-react";
+import { Phone, Mail, Building2, Download, ArrowLeft } from "lucide-react";
 import { QRCodeSVG } from "qrcode.react";
 import { useParams, useNavigate } from "react-router-dom";
 import { contacts } from "../data/contacts";
@@ -41,7 +41,7 @@ END:VCARD`;
     <div className="min-h-screen pt-20 bg-gradient-to-br from-blue-50 to-blue-100">
       <div className="container mx-auto px-4 py-12">
         <button
-          onClick={() => navigate('/')}
+          onClick={() => navigate("/")}
           className="mb-8 flex items-center text-blue-600 hover:text-blue-800 transition-colors"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
