@@ -1,5 +1,7 @@
 import { ContactInfo } from "../types/contact";
-import ceo from "../assets/ceo.jpg";
+import founder from "../assets/founder.png";
+import om from "../assets/om.png";
+import fm from "../assets/fm.png";
 
 const processContact = (contact: ContactInfo): ContactInfo => ({
   ...contact,
@@ -7,52 +9,52 @@ const processContact = (contact: ContactInfo): ContactInfo => ({
 });
 
 export const contacts: Record<string, ContactInfo> = {
-  ceo: processContact({
-    id: "ceo",
-    image: ceo,
+  founder: processContact({
+    id: "founder",
+    image: founder,
     firstName: "Dilith",
     lastName: "Achalan",
     email: "support@efficia.lk",
-    secondaryEmail: "",
-    designation: "Chief Executive Officer",
+    secondaryEmail: "dilith.achalan@outlook.com",
+    designation: "Founder, Operations Specialist",
     company: "Efficia IT Solutions",
     mobile: "+94773330060",
     work: "",
   }),
-  cto: processContact({
-    id: "cto",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7",
-    firstName: "Michael",
-    lastName: "Johnson",
-    email: "michael.johnson@company.com",
-    secondaryEmail: "cto@company.com",
-    designation: "Chief Technology Officer",
-    company: "Tech Solutions Inc.",
-    mobile: "+1 (555) 234-5678",
-    work: "+1 (555) 876-5432",
+  om: processContact({
+    id: "om",
+    image: om,
+    firstName: "Lahiru",
+    lastName: "Lakshan",
+    email: "support@efficia.lk",
+    secondaryEmail: "glahirulakshan@outlook.com",
+    designation: "Operations Manager",
+    company: "Efficia IT Solutions",
+    mobile: "+94773587608",
+    work: "",
   }),
-  coo: processContact({
-    id: "coo",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2",
-    firstName: "Sarah",
-    lastName: "Williams",
-    email: "sarah.williams@company.com",
-    secondaryEmail: "coo@company.com",
-    designation: "Chief Operating Officer",
-    company: "Tech Solutions Inc.",
-    mobile: "+1 (555) 345-6789",
-    work: "+1 (555) 765-4321",
+  tm: processContact({
+    id: "tm",
+    image: om,
+    firstName: "Ishara",
+    lastName: "Lakshan",
+    email: "support@efficia.lk",
+    secondaryEmail: "isharalakshan@outlook.com",
+    designation: "Technology Manager",
+    company: "Efficia IT Solutions",
+    mobile: "+94765913525",
+    work: "",
   }),
-  cfo: processContact({
-    id: "cfo",
-    image: "https://images.unsplash.com/photo-1559989976-c3d521d1638b",
-    firstName: "David",
-    lastName: "Brown",
-    email: "david.brown@company.com",
-    secondaryEmail: "cfo@company.com",
-    designation: "Chief Financial Officer",
-    company: "Tech Solutions Inc.",
-    mobile: "+1 (555) 456-7890",
-    work: "+1 (555) 654-3210",
+  fm: processContact({
+    id: "fm",
+    image: fm,
+    firstName: "Hansani",
+    lastName: "Perera",
+    email: "support@efficia.lk",
+    secondaryEmail: "hansanimadushani91@gmail.com",
+    designation: "Finance Manager",
+    company: "Efficia IT Solutions",
+    mobile: "+94771681184",
+    work: "",
   }),
 };

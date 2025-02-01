@@ -19,7 +19,7 @@ const ContactCard: React.FC<ContactCardProps> = ({ contact }) => {
         <img
           src={contact.image}
           alt={`${contact.fullName}`}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-top"
         />
       </div>
       <div className="p-6">
@@ -30,7 +30,7 @@ const ContactCard: React.FC<ContactCardProps> = ({ contact }) => {
           <Building2 className="w-4 h-4 mr-2" />
           <span>{contact.designation}</span>
         </div>
-        <div className="text-sm text-gray-500">{contact.email}</div>
+        <div className="text-sm text-gray-500">{contact.secondaryEmail}</div>
       </div>
     </div>
   );

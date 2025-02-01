@@ -5,9 +5,22 @@ import { QRCodeSVG } from "qrcode.react";
 import { contacts } from "../data/contacts";
 
 const Contact = () => {
-  const { id = "ceo" } = useParams();
+  const { id } = useParams();
   const navigate = useNavigate();
-  const contactInfo = contacts[id] || contacts.ceo;
+
+  // If ID doesn't exist in contacts, redirect to home
+  useEffect(() => {
+    if (id && !contacts[id]) {
+      navigate("/");
+    }
+  }, [id, navigate]);
+
+  // If no valid contact is found, don't render anything
+  if (!id || !contacts[id]) {
+    return null;
+  }
+
+  const contactInfo = contacts[id];
   const downloadTriggered = useRef(false);
 
   // Generate vCard content
@@ -15,6 +28,7 @@ const Contact = () => {
 VERSION:3.0
 N:${contactInfo.lastName};${contactInfo.firstName};;;
 TITLE:${contactInfo.designation}
+ORG:${contactInfo.company}
 EMAIL;type=INTERNET;type=WORK:${contactInfo.email}
 EMAIL;type=INTERNET;type=WORK:${contactInfo.secondaryEmail}
 TEL;type=CELL:${contactInfo.mobile}
@@ -137,7 +151,7 @@ END:VCARD`;
 
                 <div className="bg-white p-4 rounded-xl shadow-md">
                   <QRCodeSVG
-                    value={`https://efficia.github.io/contact#${id}`}
+                    value={vCardContent}
                     size={200}
                     level="H"
                     includeMargin={true}
