@@ -36,26 +36,6 @@
     --text-success: #22c55e;
     --text-warning: #f59e0b;
 
-    /* Section Backgrounds */
-    --hero-overlay: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-    --featured-destinations-bg: linear-gradient(135deg, #f3f4f6 0%, #ffffff 100%);
-    --why-choose-us-bg: linear-gradient(180deg, rgba(241, 196, 15, 1) 100%, rgba(75, 85, 99, 0) 100%);
-    --tours-section-bg: linear-gradient(180deg, rgba(255, 255, 255, 1) 9%, rgba(75, 85, 99, 0.5) 100%);
-    --gallery-section-bg: linear-gradient(180deg, rgba(241, 196, 15, 0.8) 100%, rgba(75, 85, 99, 0.8) 100%);
-    --testimonials-bg: linear-gradient(135deg, #f3f4f6 0%, #ffffff 100%);
-    --faq-section-bg: linear-gradient(180deg, rgba(241, 196, 15, 1) 100%, rgba(75, 85, 99, 0) 100%);
-    --contact-bg-overlay: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
-    --about-us-bg: linear-gradient(180deg, rgba(241, 196, 15, 1) 100%, rgba(75, 85, 99, 0) 100%);
-
-    /* Section Images */
-    --why-choose-us-bg-image: url('../assets/images/why-choose-us.jpg');
-    --tours-section-bg-image: url('');
-    --gallery-section-bg-image: url('../assets/images/blue-line-gradient_01.jpg');
-    --faq-section-bg-image: url('../assets/images/blue-line-gradient_02.jpg');
-    --contact-bg-image: url('../assets/images/contact-us.jpg');
-    --about-us-full-bg-image: url('../assets/images/blue-line-gradient_01.jpg');
-    --about-us-bg-image: url('../assets/images/blue-line-gradient_02.jpg');
-
     /* Fonts */
     --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
     --font-heading: 'Inter', system-ui, -apple-system, sans-serif;
