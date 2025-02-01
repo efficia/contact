@@ -1,6 +1,7 @@
 import { ContactInfo } from "../types/contact";
 import founder from "../assets/founder.png";
 import om from "../assets/om.png";
+import tm from "../assets/tm.png";
 import fm from "../assets/fm.png";
 
 const processContact = (contact: ContactInfo): ContactInfo => ({
@@ -35,7 +36,7 @@ export const contacts: Record<string, ContactInfo> = {
   }),
   tm: processContact({
     id: "tm",
-    image: om,
+    image: tm,
     firstName: "Ishara",
     lastName: "Lakshan",
     email: "support@efficia.lk",
