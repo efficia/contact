@@ -1,7 +1,7 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { ContactInfo } from '../types/contact';
-import { Building2 } from 'lucide-react';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { ContactInfo } from "../types/contact";
+import { Building2 } from "lucide-react";
 
 interface ContactCardProps {
   contact: ContactInfo;
@@ -12,7 +12,7 @@ const ContactCard: React.FC<ContactCardProps> = ({ contact }) => {
 
   return (
     <div
-      onClick={() => navigate(`/contact/${contact.id}`)}
+      onClick={() => navigate(`/${contact.id}`)}
       className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer transform transition-transform hover:scale-105"
     >
       <div className="h-48 overflow-hidden">
@@ -36,4 +36,4 @@ const ContactCard: React.FC<ContactCardProps> = ({ contact }) => {
   );
 };
 
-export default ContactCard
+export default ContactCard;

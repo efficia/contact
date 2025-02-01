@@ -1,13 +1,13 @@
 import { useEffect, useRef } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import { Phone, Mail, Building2, Download, ArrowLeft } from "lucide-react";
 import { QRCodeSVG } from "qrcode.react";
-import { useParams, useNavigate } from "react-router-dom";
 import { contacts } from "../data/contacts";
 
 const Contact = () => {
-  const { id } = useParams();
+  const { id = "ceo" } = useParams();
   const navigate = useNavigate();
-  const contactInfo = contacts[id || ""] || contacts.ceo;
+  const contactInfo = contacts[id] || contacts.ceo;
   const downloadTriggered = useRef(false);
 
   // Generate vCard content
@@ -41,7 +41,7 @@ END:VCARD`;
     <div className="min-h-screen pt-10 bg-gradient-to-br from-blue-50 to-blue-100">
       <div className="container mx-auto">
         <button
-          onClick={() => navigate("/contact")}
+          onClick={() => navigate("/")}
           className="mb-8 flex items-center text-primary-600 hover:text-primary-800 transition-colors"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
@@ -137,7 +137,7 @@ END:VCARD`;
 
                 <div className="bg-white p-4 rounded-xl shadow-md">
                   <QRCodeSVG
-                    value={vCardContent}
+                    value={`https://efficia.github.io/contact#${id}`}
                     size={200}
                     level="H"
                     includeMargin={true}
